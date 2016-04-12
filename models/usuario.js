@@ -10,5 +10,5 @@ var Schema = require('mongoose').Schema;
 		, index: {unique: true}}
 		, contatos: [contato]
 	});
-return db.model('usuarios', usuario);
+	return db.model('usuarios', usuario);
 };
