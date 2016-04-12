@@ -1,0 +1,45 @@
+<% include ../header %>
+	<header>
+		<h1>Ntalk</h1>
+		<h4>Lista de contatos</h4>
+	</header>
+<section>
+		<form action="/contato" method="post">
+			<input type="text" name="contato[nome]" placeholder="nome"></input>
+			<input type="text" name="contato[email]" placeholder="email"></input>
+			<button type="submit"> Cadastrar</button>
+		</form>
+
+		<table>
+
+			<thead>
+				<tr>
+					<th>Nome</th>
+					<th>E-mail</th>
+					<th>Ação</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<% contatos.forEach(function(contato) { %>
+<tr>
+<td><%- contato.nome %></td>
+<td><%- contato.email %></td>
+<td>
+<span id="notify_<%- contato.email %>" class="label">
+Offline
+</span>
+</td>
+<td>
+<a href="/contato/<%- contato._id %>">Detalhes</a>
+<a href="/chat" id="chat_<%- contato.email %>">Conversar
+</a>
+</td>
+</tr>
+<% }) %>
+			</tbody>
+</table>
+</section>
+<% include notify_script %>
+<% include ../exit %>
+<% include ../footer %>
