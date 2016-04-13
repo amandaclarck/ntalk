@@ -10,6 +10,7 @@
 	var enviar = function() {
 		var msg = document.getElementById('msg');
 		socket.emit('send-server', msg.value);
+		document.getElementById('msg').value = '';
 	};
 </script>
 <header>
