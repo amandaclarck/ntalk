@@ -1,6 +1,6 @@
 <script src="/socket.io/socket.io.js"></script>
 <script>
-var socket = io('http://localhost:3000');
+var socket = io();
 var notify = function(data) {
 var id = 'notify_' + data.email;
 var notify = document.getElementById(id);

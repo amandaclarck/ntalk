@@ -1,12 +1,15 @@
 {
-  "name": "http-server",
-  "main": "server.js",
-  "devDependencies": {
-    "express": "~4.13.3",
-    "nodemon": "^1.0.15",
-    "grunt": "~0.4.1"
+  "name": "ntalk",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node clusters.js",
+    "test": "NODE_ENV=test ./node_modules/mocha/bin/mocha test/*.js"
   },
   "dependencies": {
+    "compression": "^1.6.1",
+    "connect-redis": "^3.0.2",
+    "csurf": "^1.8.3",
     "express-load": "^1.1.15",
     "express-session": "^1.13.0",
     "merge-descriptors": "^1.0.1",
@@ -22,8 +25,17 @@
     "send": "^0.13.2",
     "serve-static": "^1.10.2",
     "socket.io": "^1.4.5",
+    "socket.io-redis": "^1.0.0",
     "type-is": "^1.6.12",
     "utils-merge": "^1.0.0",
     "vary": "^1.1.0"
+  },
+  "devDependencies": {
+    "express": "~4.13.3",
+    "grunt": "~0.4.1",
+    "mocha": "^2.4.5",
+    "nodemon": "^1.0.15",
+    "should": "^8.3.0",
+    "supertest": "^1.2.0"
   }
 }
