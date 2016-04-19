@@ -1,4 +1,4 @@
-var cluster = require('cluster')
+/*var cluster = require('cluster')
 , cpus = require('os').cpus()
 ;
 	if (cluster.isMaster) {
@@ -17,4 +17,4 @@ var cluster = require('cluster')
 	});
 	} else {
 		require('./app');
-	}
+	}*/
